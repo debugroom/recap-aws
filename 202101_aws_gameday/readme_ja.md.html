@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://gameday-jp.s3-website-ap-northeast-1.amazonaws.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>readme_ja.md</title>
+
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="%E3%83%A6%E3%83%8B%E3%82%B3%E3%83%BC%E3%83%B3%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%81%B8%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%EF%BC%81">ユニコーンレンタルへようこそ！</h1>
+<h3 id="%E8%83%8C%E6%99%AF">背景;</h3>
+<p>次世代アプリケーション開発のために、弊社では“ Microservices Mesh”アプローチを取っています。
+すべてのチームはフロントエンドAPI（「サービスルーター」と呼ばれる）のコピーを持っています。サービスルータは他の社内チームのマイクロサービスを使用します。</p>
+<p>あなたのチームは、実稼働検証中の多数のサービスルーターのうちの1つを運用しています。
+サービスルータはデータ文字列を含むリクエストと、レスポンスを返す前に完了しなければならない処理のリストを受け取ります。</p>
+<p>サービスルータは、受け取ったデータ文字列を各処理に必要なマイクロサービスに転送します。
+サービスルータは、「service-table」と呼ばれるDynamoDBテーブルを参照することによって、これらのマイクロサービスエンドポイントを見つけます。</p>
+<h3 id="%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E6%A6%82%E8%A6%81">ゲームの概要:</h3>
+<ul>
+<li>
+<p>他のチームが使用できるようにマイクロサービスをデプロイし、保守、および最適化します。</p>
+</li>
+<li>
+<p>ダッシュボードの入力フォームからサービスを公開できます。これによってあなたのマイクロサービスが、"Services Marketplace" に公開されます。</p>
+</li>
+<li>
+<p>サービスルーターの可用性を高めます。Application Load BalancerとAutoscalingグループを利用することで、HA構成を取ることができます。</p>
+</li>
+<li>
+<p>Services Marketplaceのリンクにアクセスして、最高のマイクロサービスを見つけ、それを使用してください(DynamoDBテーブルのデータを更新することで利用するマイクロサービスを変更できます。)。</p>
+</li>
+<li>
+<p>自分のサービスを利用してはいけません。</p>
+</li>
+<li>
+<p>全てのサービスを正常に稼働させ続けてください（X-Ray、CW Metrics、CW Logs利用しましょう）。<a href="https://dashboard.eventengine.run/score-events">score events</a>をチェックして変化を確認してください。</p>
+</li>
+</ul>
+<h3 id="%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">マイクロサービス:</h3>
+<p>点数を上げるためには、マイクロサービスのコピーを実行する必要があります。
+他のチームのサービスルーターがリクエストを受け取ると、彼らは必要な処理の一部を実行するためにあなたのマイクロサービスを呼び出すかもしれません。その場合、彼らのスコアがあなたにシェアされます。</p>
+<table>
+<thead>
+<tr>
+<th>サービス名</th>
+<th>タイプ</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>swapcaser</td>
+<td>SAM(Lambda と API Gateway)</td>
+<td><a href="https://s3.amazonaws.com/ee-assets-prod-us-east-1/modules/gd2018/assets/swapcaser.zip"><strong>サービスと説明</strong></a></td>
+</tr>
+<tr>
+<td>reverser</td>
+<td>Fargate</td>
+<td><a href="https://s3.amazonaws.com/ee-assets-prod-us-east-1/modules/gd2018/assets/reverser-readme.txt"><strong>サービスと説明</strong></a></td>
+</tr>
+<tr>
+<td>leeter</td>
+<td>Elastic Beanstalk</td>
+<td><a href="https://s3.amazonaws.com/ee-assets-prod-us-east-1/modules/gd2018/assets/leeter.zip"><strong>サービスと説明</strong></a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>マイクロサービスが機能しているかどうかはどうすればわかりますか？</strong><br>
+まず、<a href="https://s3.amazonaws.com/ee-assets-prod-us-east-1/modules/gd2018/assets/testsvc.zip">このzipファイル</a>で提供されている「testsvc」プログラムを使ってみてください。
+これはあなたのマイクロサービスをテストし、正しく機能していない場合に問題点に関する情報を提供します。「testsvc」は他のチームのマイクロサービスをテストするのにも役立ちます。zipファイルには使用方法を記載したREADMEが含まれています。</p>
+<p>次に、ダッシュボードの正しい入力フォームにサービスのエンドポイント(URL)を入力します。
+Services Marketplaceは、登録されたサービスのヘルスチェックを行います。
+もし、自分のサービスのレイテンシと成功率が0で、他のチームのサービスはうまく動いている場合は、自分のマイクロサービスを再確認する必要があります。</p>
+<p><strong>マイクロサービスへの実際のリクエストをシミュレーションする方法は?</strong></p>
+<p>この<a href="https://s3.amazonaws.com/ee-assets-prod-us-east-1/modules/gd2018/assets/testsvc.zip">zipファイル</a>で提供されているtestsvcプログラムを使用して、実際のユーザからのリクエストをシミュレートすることができます。
+また、cURL、Httpie、Postmanなどを使用することもできます。次に例を示します。</p>
+<pre class="hljs"><code><div>curl -d '{"Message":"TestMessage"}' -H 'Content-Type: application/json' URI
+#Or with HTTPie
+http POST URI Message='TestMessage'
+</div></code></pre>
+<h3 id="%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC">サービスルーター:</h3>
+<p><strong>あなたのサービスルーターの構成図</strong><br>
+<img src="./readme_ja.md_files/1.png" alt="AWS Architecture"></p>
+<p><strong>サービスルーターは、DynamoDBの "service-table"テーブルから、メッセージの送信先を検索する</strong></p>
+<p>サービスルーターが使用するマイクロサービスを更新するには、DynamoDBテーブルを編集します。
+多くのサービスを利用する必要がありますが、その中でも最も速いもののみを利用したいはずです。
+ゲーム開始時に提供されるレガシーサービスは非常に遅いです。</p>
+<p><strong>サービスルーターは別のDevOpsチームのアカウントのマイクロサービスエンドポイントを呼び出す</strong></p>
+<p><img src="./readme_ja.md_files/2.png" alt="AWS Architecture"></p>
+<p><strong>他のチームからのレスポンスを受信すると、サービスルータは正しいペイロードを送信者に返す</strong></p>
+<p>メッセージには他のチームからの署名が含まれており、そのチームが一部の処理を実施したことが証明されます。
+あなたのチームと利用したサービスを所持しているチームが得点を獲得します。</p>
+<p><img src="./readme_ja.md_files/3.png" alt="AWS Architecture"></p>
+<p><strong>サービスディスカバリ:サービスルーターがメッセージの送信先を判断する方法</strong></p>
+<p>あなたのAWSアカウントには「service-table」のDynamoDBテーブルが事前に作成されています。
+4つのレガシーサービスがすでに登録されていますが、これらは前のチームによって(解雇される前に)作成され、非常に低速です。</p>
+<table>
+<thead>
+<tr>
+<th>DDB フィールド</th>
+<th>説明</th>
+<th>必須</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Endpoint</td>
+<td>サービスルータが使用できるマイクロサービスのURI</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ServiceType</td>
+<td>サービスの種類(reverser, swapcaser, leeter)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TeamName</td>
+<td>どのチームがサービスを提供しているか(参考用)</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>このテーブルに新しいサービスのitemを追加し、古い遅いサービスのitemを削除する必要があります。
+これを行う簡単な方法は、古いitemを複製して、EndpointフィールドとTeamNameフィールドを変更することです。</p>
+<p><img src="./readme_ja.md_files/4.png" alt="Add Service to DDB"></p>
+<p><strong>サービスルーターの構築</strong></p>
+<p>ソースは下記のURLから取得できます。</p>
+<p>https://s3.amazonaws.com/ee-assets-prod-us-east-1/modules/gd2018/assets/service-router.zip</p>
+<p>サービスルーターを構築/再構築するには、Amazon Linux 2で以下のようなユーザーデータを使用します。
+あなたのアカウントには、すでにこの方法で構築されたAutoscalingグループが付属しています。</p>
+<pre class="hljs"><code><div>#!/bin/bash
+export AWS_DEFAULT_REGION=&lt;region_the_game_is_running_in&gt;
+aws configure set region $AWS_DEFAULT_REGION
+cd /home/ec2-user/
+yum install -y unzip python-pip
+curl -o xray.zip https://s3.amazonaws.com/aws-xray-assets.us-east-1/xray-daemon/aws-xray-daemon-linux-2.x.zip
+#for ARM / a1 instances, use 'curl -o xray.zip https://s3.amazonaws.com/ee-assets-prod-us-east-1/modules/gd2018/assets/xray-arm.zip'
+unzip xray.zip
+chmod +x ./xray &amp;&amp; nohup ./xray &amp;
+curl -o service-router.zip https://s3.amazonaws.com/ee-assets-prod-us-east-1/modules/gd2018/assets/service-router.zip
+unzip service-router.zip
+cd service-router
+pip install -r requirements.txt
+python service-router.py
+</div></code></pre>
+<p>ユーザーデータの仕組みについては下記をご覧ください。</p>
+<p>https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html</p>
+<p>Session Managerを使用してインスタンスにログインすることもできます。</p>
+<p>https://console.aws.amazon.com/systems-manager/session-manager/</p>
+<p><strong>サイズ制限</strong>
+サービスルータは大きくする必要はありません：</p>
+<ul>
+<li>a1.medium</li>
+<li>t2またはt3 nano / micro / small
+を使用してください。</li>
+</ul>
+<h3 id="%E6%93%8D%E4%BD%9C%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F">操作に関するよくある質問:</h3>
+<p><strong>サービスルーターが正しく機能しているかどうかはどうすればわかりますか?</strong></p>
+<p>ブラウザでエンドポイントをテストします。DynamoDBテーブルから取得したサービスのリストである「Service Map」が表示されます。</p>
+<p>例：</p>
+<pre class="hljs"><code><div>Service Map: {'reverser': ['http://reverser-url'], 'givemeasign': ['http://givemeasign-url'], 'swapcaser': ['http://swapcaser-url']}
+</div></code></pre>
+<p><strong>サービスルーターの現在の挙動を確認するにはどうすれば良いですか?</strong><br>
+サービスルーターはAWS X-RayとAmazon CloudWatch Logsと統合されています。
+インスタンス / コンテナ / lambdaに 'PlayerInstanceProfile'または 'TEAMROLE' IAMロールがアタッチされている場合は、それらのサービスにメトリックとログが送信されます。
+Cloudwatch Insightsを使用してサービスルーターのログからエラーを検索できます。</p>
+<p>例:</p>
+<pre class="hljs"><code><div>fields @timestamp, status, message
+| filter status not like /info/
+| sort @timestamp desc
+| limit 20
+</div></code></pre>
+<p><strong>対話的にサービスルーターを実行/テストするにはどうすればよいですか？</strong></p>
+<p>EC2インスタンスに接続するにはセッションマネージャ（Systems Managerの一部）を使用します。
+これを行うには、インスタンスのSSM Agentを更新する必要があります。セッションマネージャコンソールの指示に従います。</p>
+<p>サービスルーターの実行のためのコマンド例:</p>
+<pre class="hljs"><code><div>sudo su ec2-user
+cd /home/ec2-user/
+cd service-router/
+sudo python service-router.py 
+</div></code></pre>
+<p>リクエストトレースを取得するために、xrayを利用することもできます。</p>
+<p>xrayを実行するためのコマンド例:</p>
+<pre class="hljs"><code><div>curl -O https://s3.amazonaws.com/aws-xray-assets.us-east-1/xray-daemon/aws-xray-daemon-linux-2.x.zip
+unzip aws-xray-daemon-linux-2.x.zip
+nohup ./xray &amp;
+</div></code></pre>
+<p><strong>サービスルーターへの実際の要求をシミュレートする方法</strong></p>
+<p>cURL、HttpieあるいはPostman（GUI APIテストツール）を使って実際のユーザーのリクエストをシミュレートすることができます。</p>
+<pre class="hljs"><code><div>#curl https://curl.haxx.se/download.html: 
+curl -d '{"Message":"TestMessage","RequestId":"test","Services":["reverser","swapcaser"]}' -H 'Content-Type: application/json' URI
+#curl (Windows escaping)
+curl -d "{\"Message\":\"TestMessage\",\"RequestId\":\"test\",\"Services\":[\"reverser\",\"swapcaser\"]}" -H "Content-Type: application/json" URI
+#Httpie https://httpie.org/
+http POST URI Message='TestMessage' RequestId='test' Services:='["reverser","swapcaser"]'
+</div></code></pre>
+
+
+
+</body></html>
