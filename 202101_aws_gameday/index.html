@@ -93,9 +93,9 @@
         </div>
       </section>
       <section id="3-2">
-        <span style="margin: 0px;font-size:32px">
+        <div style="margin: 30px;font-size:32px">
         最初に！Gameday楽しかったですか？
-        </span>
+      </div>
         <div style="display:flex;disply:-webkit-flex;display:-moz-flex;">
           <div style="width:auto;-webkit-flex : 1 0 300px;-moz-flex : 1 0 300px;flex : 1 0 300px;">
             <img src="images/question1-qr-code.png" style="" width="100%">
@@ -103,7 +103,7 @@
           <div style="width:auto;-webkit-flex : 1 0 500px;-moz-flex : 1 0 500px;flex : 1 0 500px;font-size:20px">
             <ul>
               <li style="margin: 10px 20px 10px"><span style="font-size:20px">以下の選択肢からもっとも近い答えを選択。</span>
-                <ol>
+                <ol style="margin: 0px 20px 0px">
                   <li style="margin: 10px 0px 10px">
                     <span style="font-size:16px">うぇーい</span>
                   </li>
@@ -860,7 +860,7 @@
       </section>
     </section>
     <section id="5">
-      <section id="5-1">
+      <section id="5-1"data-background="images/rodan.jpg" style="background-color:rgba(0,0,0,0.5);">
         <h6>個人レベルの振り返り</h6>
       </section>
       <section id="5-2">
@@ -895,10 +895,190 @@
             </ul>
           </div>
       </section>
-      <section id="3-3">
+      <section id="5-3">
       <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/s/cdd01108d06d5db173170fac99904226/7dca368ce405' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
         <img src="images/question1-qr-code.png" style="position: absolute;bottom:0px; left:0px; z-index:1" width="10%">
         <span style="margin: 0px;font-size:14px">質問に答えるには左のQRコードを読み取ってください</span>
+      </section>
+      <section id="5-4">
+        <h6>ポイント</h6>
+        <div style="margin: 30px;font-size:24px">
+          <ul>
+            <li style="margin: 20px 10px 20px"> 実際のところ、ソースコードの細かいところまで押さえておく必要はない。
+              <ul style="margin: 0px　20px 0px; font-size: 16px;">
+                <li style="margin: 10px 0px 10px">
+                  もちろん、細かく押さえておくに越したことはない
+                </li>
+                <li style="margin: 10px 0px 10px">
+                  ただし、時間が限られているので、資材を細かくチェックする時間の余裕はない。
+                </li>
+                <li style="margin: 10px 0px 10px">
+                  各サービスがどのようなリソースで構成されているか把握することは最低限必要。
+                </li>
+              </ul>
+            </li>
+            <li style="margin: 20px 10px 20px">重要なのは、資材の種類や中身をざっと眺めて、どういうリソースでどのように構築されているか頭でイメージできるか。
+              <ul style="margin: 0px　20px 0px; font-size: 16px;">
+                <li style="margin: 10px 0px 10px">
+                実際に構築した経験がなければ、イメージするのは非常に困難
+                </li>
+                <li style="margin: 10px 0px 10px">
+                実開発で経験がないひとは<a href="https://aws.amazon.com/jp/aws-jp-introduction/aws-jp-webinar-hands-on/" target="_blank">無償ハンズオン</a>で一通り体験しよう！
+                </li>
+              </ul>
+            </li>
+            <li style="margin: 20px 10px 20px">ある程度、構成や状況を把握している状態がスタートライン。次のステップはトラブル発生時にどのようにシューティングすべきか？</li>
+          </ul>
+        </div>
+      </section>
+      <section id="5-5"data-background="images/troubleshooting.jpg" style="background-color:rgba(0,0,0,0.75);">
+        <h6>トラブルシューティング</h6>
+      </section>
+      <section id="5-6">
+        <span style="margin: 0px;font-size:32px">
+          トラブル解析に使用するサービス
+        </span>
+        <p><img style="margin: 0 auto 20px;border:0px; background:rgba(255, 255, 255, 0" width="100%" src="images/troubleshooting-tool.png" /></p>
+      </section>
+      <section id="5-7">
+          <p><span style="font-size:24px">トラブル解析に使用するサービスの概要</span></p>
+        <div style="font-size:20px; margin:auto">
+          <table>
+            <colgroup>
+              <col style="width:20%;">
+              <col style="width:80%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>サービス名</th>
+                <th>詳細</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Amazon CloudWatch Metrics</td>
+                <td>EC2やECS、Lambdaなどのコンピューティングリソースのパフォーマンスメトリクス(CPU、メモリ)を収集し表示する機能</td>
+              </tr>
+              <tr>
+                <td>Amazon CloudWatch Logs</td>
+                <td>AWSサービスやEC2などのAWSリソースで実行される標準出力を収集し、アプリケーションのログを監視・保存・イベント実行する機能。 また、統合CloudWatchエージェントを任意のサーバにインストールして、Amazon CloudWatch Logsにログを送信することができる。 Amazon CloudWatch Logsは AWS PrivateLinkに対応しているため、オンプレミスのサーバログを対象とすることも可能</td>
+              </tr>
+              <tr>
+                <td>Amazon CloudWatch Logs</td>
+                <td>専用のクエリ言語を使ってAmazon CloudWatch Logs内のログの検索と可視化をすることができる。 なお、2018年11月5日以降にAmazon CloudWatch Logsに送信されたログのみが検索の対象</td>
+              </tr>
+              <tr>
+                <td>AWS X-Ray</td>
+                <td>マイクロサービスアプリケーションを分析することができるサービス。サービス実行時間の計測やトレース、フィルタリングによる可視化などが行える。詳細は、<a href="https://news.mynavi.jp/itsearch/article/devsoft/5185" target="_blank">連載「AWSで作るマイクロサービス」の第8回</a>を参照のこと。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="5-7">
+          <p><span style="font-size:24px">トラブルシューティングのステップ</span></p>
+        <div style="font-size:18px; margin:auto">
+          <table>
+            <colgroup>
+              <col style="width:20%;">
+              <col style="width:80%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>ステップ</th>
+                <th>詳細</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>障害事象(インシデント)の特定</td>
+                <td>エラーが発生している箇所をX-RayやCloudWatch Metricsを使って特定する。API GatewayやLoadBalancer、Route53などはCloudWatch Metricsのエラーカウントなどの指標を、VPC内アプリケーション環境はX-Rayのサービスマップを確認して、大まかにエラーの発生箇所を掴む。エラーログなどはCloudWatch Logs Insightなどで効率的に確認する。</td>
+              </tr>
+              <tr>
+                <td>インシデントの原因の切り分け</td>
+                <td>ネットワーク通信障害か、環境が起因した障害か、アプリケーションの内部の問題か、インシデントの内容を基に事象を切り分ける。複数発生している場合もある。原因の目処がついたら、詳しい専門の担当に調査をアサインする。エラーログなどはCloudWatch Logs Insightなどで効率的に確認する。</td>
+              </tr>
+              <tr>
+                <td>発生原因の解析・再現</td>
+                <td>CloudWatch Logsで発生している原因を解析する。偶発的に発生している事象は再現するか確認し、原因を断定する。</td>
+              </tr>
+              <tr>
+                <td>対処</td>
+                <td>アプリケーションバグの修正や、環境の再構築、修復、マスターデータの再設定など不具合を解消するための対処を行う。1人でやると焦りによるミスの誘発や見落としなどで２次被害を招くのでペアワークするのが望ましい。また、どういった対処をしたのか必ず記録しておくこと</td>
+              </tr>
+              <tr>
+                <td>復旧の確認</td>
+                <td>対処によりインシデントが収束したか確認する。事前にステージング環境などで収束が確認できてからプロダクション環境へ反映することが望ましい</td>
+              </tr>
+              <tr>
+                <td>再発防止策・歯止め、横展開</td>
+                <td>事象の原因から再発防止策を検討、類似事象が発生しないか歯止めをかける施策を実行する。また、関連するシステムがあれば横展開を行う。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+    <section>
+      <section id="6-1"data-background="images/high-five.jpg" style="background-color:rgba(0,0,0,0.5);">
+        <h6>チームとしての振り返り</h6>
+      </section>
+      <section id="6-2">
+        <span style="margin: 0px;font-size:32px">
+          チーム構成例1
+        </span>
+        <p><img style="margin: 0 auto 20px;border:0px; background:rgba(255, 255, 255, 0" width="80%" src="images/team-type1.png" /></p>
+      </section>
+      <section id="6-3">
+        <span style="margin: 0px;font-size:32px">
+          チーム構成例2
+        </span>
+        <p><img style="margin: 0 auto 20px;border:0px; background:rgba(255, 255, 255, 0" width="100%" src="images/team-type2.png" /></p>
+      </section>
+      <section id="5-4">
+        <p><span style="font-size:32px">あなたのチームはどのような編成・役割分担が最適ですか？</span></p>
+        <div style="margin: 30px;font-size:24px">
+          <ul>
+            <li style="margin: 20px 10px 20px; list-style-type:none">※正解はありません。
+              <ul style="margin: 0px　20px 0px; font-size: 20px;">
+                <li style="margin: 10px 0px 10px">
+                メンバーの人数や技量によって最適なチーム構成は異なる。
+                </li>
+                <li style="margin: 10px 0px 10px">
+                  各メンバーで得手不得手、性格、スキルレベル、意欲に応じて編成
+                </li>
+                <li style="margin: 10px 0px 10px">
+                  チームに適したスタイルは？ピラミッド型？フラット型？
+                </li>
+              </ul>
+            </li>
+        </div>
+      </section>
+      <section id="5-5">
+        <p><span style="font-size:32px">グループディスカッション</span></p>
+        <div style="margin: 30px;font-size:24px">
+          <ul>
+            <li style="margin: 20px 10px 20px; list-style-type:none">次回エントリーしたらどうするか、グループ内で話し合ってみましょう。
+              <ul style="margin: 0px　20px 0px; font-size: 20px;">
+                <li style="margin: 10px 0px 10px">
+                  自分が出来ていたこと・出来ていなかったこと。
+                </li>
+                <li style="margin: 10px 0px 10px">
+                  次回までに出来るようになりたいこと。
+                </li>
+                <li style="margin: 10px 0px 10px">
+                  こうした方がよいという周りへのアドバイス
+                </li>
+                <li style="margin: 10px 0px 10px">
+                  自分達のチームが機能するのにもっとも適した構成・役割分担は何か？
+                </li>
+                <li style="margin: 10px 0px 10px">
+                  情報共有のやり方、作業の進め方、ルールなど決めておくべきことは？
+                </li>
+              </ul>
+            </li>
+            <li style="margin: 20px 10px 20px; list-style-type:none">15分間程話し合って、幾つかのチームは内容を全体に共有してください。※ランダムにあてます。
+        </div>
       </section>
     </section>
     <section id="7">
