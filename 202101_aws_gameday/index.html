@@ -54,7 +54,6 @@
       <br/>
       <br/>
       <p>2021.1.22 at NTT DATA</p>
-
     </section>
     <section id="2">
       <h6>このスライドの使い方</h6>
@@ -63,6 +62,52 @@
       ※当スライドは <a href="https://github.com/hakimel/reveal.js" target="_blank">「reveal.js」</a> を使って、GitHub Pages上に作成
       </span>
     </section>
+    <section id="2-2">
+      <h6>本日の振り返りのプレゼンター</h6>
+      <div style="display:flex;disply:-webkit-flex;display:-moz-flex;">
+        <div style="width:auto;-webkit-flex : 1 0 400px;-moz-flex : 1 0 400px;flex : 1 0 400px;">
+          <img src="images/profile.jpg" width="90%">
+        </div>
+        <div style="width:auto;-webkit-flex : 1 0 450px;-moz-flex : 1 0 450px;flex : 1 0 450px;">
+        <ul>
+          <div style="font-size:16px; margin:auto">
+          <li style="margin: 10px 0px 10px">名前：川畑 光平</li>
+          <li style="margin: 10px 0px 10px">所属：デジタル技術部</li>
+          <li style="margin: 10px 0px 10px"><a href="https://aws.amazon.com/jp/partners/ambassadors/?cards-body.sort-by=item.additionalFields.ambassadorName&cards-body.sort-order=asc&cards-body.q=kawabata&cards-body.q_operator=AND" target="_blank">AWS Partner Network Ambassadors(Since 2019)</a></li>
+          <li style="margin: 10px 0px 10px">今の仕事
+          <ul style="margin: 10px">
+            <li style="margin: 10px 0px 10px"><span style="font-size:16px">デジタル技術R&D / プロジェクト支援</span></li>
+            <li style="margin: 10px 0px 10px"><span style="font-size:16px">AWS社内推進・人材育成</span>
+              <ul style="margin: 10px">
+                <li style="margin: 10px 0px 10px"><span style="font-size:14px">技統本塾「クラウドネイティブ・マイクロサービス」塾長</span></li>
+                <li style="margin: 10px 0px 10px;list-style-type:none"><span style="font-size:14px">※<a href="https://home.groupwide.net/nttdata/bds/local/platformtec/introduction/2021kamiki.html#cnmsa" target="_blank">2021年上期塾生募集中</a>(残り若干名)</span>
+                <li style="margin: 10px 0px 10px;list-style-type:none"><span style="font-size:14px">※上記のリンクはNTTデータ社内のみアクセス可</span>
+                <li style="margin: 10px 0px 10px"><span style="font-size:14px">今回のAWS Gameday社内イベントの言い出しっぺです</span></li>
+              </ul>
+            </li>
+
+          </ul>
+          <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/" target="_blank">マイナビニュース「TECH+」</a>で記事連載中
+          <ul style="margin: 10px">
+            <li style="margin: 10px 0px 10px">
+              <span style="font-size:14px"><a href="https://news.mynavi.jp/itsearch/series/devsoft/AWS.html" target="_blank">AWSで作るクラウドネイティブアプリケーションの基本</a></span>
+            </li>
+            <li style="margin: 10px 0px 10px">
+              <span style="font-size:14px"><a href="https://news.mynavi.jp/itsearch/series/devsoft/aws_adv.html" target="_blank">AWSで作るクラウドネイティブアプリケーションの応用</a></span>
+            </li>
+            <li style="margin: 10px 0px 10px">
+              <span style="font-size:14px"><a href="https://news.mynavi.jp/itsearch/series/devsoft/AWSAuto.html" target="_blank">AWSで実践! 基盤構築・デプロイ自動化</a></span>
+            </li>
+            <li style="margin: 10px 0px 10px">
+              <span style="font-size:14px"><a href="https://news.mynavi.jp/itsearch/series/devsoft/aws_2.html" target="_blank">AWSで作るマイクロサービス</a></span>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </ul>
+      </div>
+    </section>
+
     <section id="3">
       <section id="3-1">
         <h4>振り返る内容</h4>
@@ -964,7 +1009,7 @@
                 <td>AWSサービスやEC2などのAWSリソースで実行される標準出力を収集し、アプリケーションのログを監視・保存・イベント実行する機能。 また、統合CloudWatchエージェントを任意のサーバにインストールして、Amazon CloudWatch Logsにログを送信することができる。 Amazon CloudWatch Logsは AWS PrivateLinkに対応しているため、オンプレミスのサーバログを対象とすることも可能</td>
               </tr>
               <tr>
-                <td>Amazon CloudWatch Logs</td>
+                <td>Amazon CloudWatch Logs Insight</td>
                 <td>専用のクエリ言語を使ってAmazon CloudWatch Logs内のログの検索と可視化をすることができる。 なお、2018年11月5日以降にAmazon CloudWatch Logsに送信されたログのみが検索の対象</td>
               </tr>
               <tr>
@@ -976,7 +1021,7 @@
         </div>
       </section>
       <section id="5-7">
-          <p><span style="font-size:24px">トラブルシューティングのステップ</span></p>
+          <p><span style="font-size:24px">一般的なAWSトラブルシューティングの基本動作・ステップ</span></p>
         <div style="font-size:18px; margin:auto">
           <table>
             <colgroup>
@@ -996,7 +1041,7 @@
               </tr>
               <tr>
                 <td>インシデントの原因の切り分け</td>
-                <td>ネットワーク通信障害か、環境が起因した障害か、アプリケーションの内部の問題か、インシデントの内容を基に事象を切り分ける。複数発生している場合もある。原因の目処がついたら、詳しい専門の担当に調査をアサインする。エラーログなどはCloudWatch Logs Insightなどで効率的に確認する。</td>
+                <td>ネットワーク通信障害か、環境が起因した障害か、アプリケーションの内部の問題か、インシデントの内容を基に事象を切り分ける。複数同時にインシデントが発生している場合もある。原因の目処がついたら、詳しい専門の担当に調査をアサインする。エラーログなどはCloudWatch Logs Insightなどで効率的に確認する。</td>
               </tr>
               <tr>
                 <td>発生原因の解析・再現</td>
@@ -1004,11 +1049,11 @@
               </tr>
               <tr>
                 <td>対処</td>
-                <td>アプリケーションバグの修正や、環境の再構築、修復、マスターデータの再設定など不具合を解消するための対処を行う。1人でやると焦りによるミスの誘発や見落としなどで２次被害を招くのでペアワークするのが望ましい。また、どういった対処をしたのか必ず記録しておくこと</td>
+                <td>アプリケーションバグの修正や、環境の再構築、修復、マスターデータの再設定など不具合を解消するための対処を行う。1人でやると焦りによるミスの誘発や見落としなどで２次被害を招く可能性があるので、ペアワークするのが望ましい。また、どういった対処をしたのか必ず記録しておくこと</td>
               </tr>
               <tr>
                 <td>復旧の確認</td>
-                <td>対処によりインシデントが収束したか確認する。事前にステージング環境などで収束が確認できてからプロダクション環境へ反映することが望ましい</td>
+                <td>対処によりインシデントが収束したか確認する。事前にステージング環境などで復旧が確認できてからプロダクション環境へ反映することが望ましい</td>
               </tr>
               <tr>
                 <td>再発防止策・歯止め、横展開</td>
